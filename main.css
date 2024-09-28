@@ -4,7 +4,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7fa;
-    /* Light, soothing background */
     color: #333;
     margin: 0;
     padding: 20px;
@@ -14,11 +13,8 @@ body {
 h1 {
     text-align: center;
     color: #007bff;
-    /* Primary color for headings */
     font-size: 2.5rem;
-    /* Increased size for emphasis */
     margin-bottom: 30px;
-    /* Spacing below the heading */
     font-family: "Fredoka", sans-serif;
 }
 
@@ -29,64 +25,46 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Input Styles */
 input[type="text"] {
     padding: 12px;
     margin: 0 10px;
     border: 2px solid #007bff;
-    /* Match the theme color */
     border-radius: 25px;
-    /* Rounded corners for a modern look */
     width: 250px;
-    /* Adjusted width */
     transition: border-color 0.3s, box-shadow 0.3s;
     font-size: 1rem;
-    /* Increased font size */
     outline: none;
-    /* Remove default outline */
 }
 
-/* Focus Effect for Inputs */
 input[type="text"]:focus {
     border-color: #0056b3;
-    /* Darker shade on focus */
     box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
-    /* Subtle shadow */
 }
 
 /* Button Styles */
 #filter-button {
     padding: 12px 24px;
-    /* Padding for larger buttons */
     border: none;
     border-radius: 25px;
-    /* Match the input styles */
     background-color: #007bff;
-    /* Primary button color */
     color: white;
     font-size: 1.1rem;
-    /* Increased font size */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-    /* Subtle shadow */
 }
 
 #filter-button:hover {
     background-color: #0056b3;
-    /* Darker shade on hover */
     transform: translateY(-2px);
     /* Lift effect */
     box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
-    /* Enhanced shadow */
 }
 
-/* Cards Container */
 #pokemon-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    /* Increased gap for better spacing */
     justify-content: center;
     padding: 20px;
 }
@@ -98,7 +76,6 @@ input[type="text"]:focus {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 250px;
-    /* Fixed card width */
     text-align: center;
     color: #fff;
     position: relative;
@@ -109,62 +86,41 @@ input[type="text"]:focus {
 
 .card:hover {
     transform: translateY(-10px);
-    /* Slight lift effect on hover */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    /* Deeper shadow */
     background: linear-gradient(135deg, #ff5f6d, #ffc371);
-    /* Color change on hover */
 }
 
 /* Card Headings */
 .card h2 {
     font-size: 2rem;
-    /* Font size for names */
     color: #fff;
-    /* Text color */
     margin: 15px 0;
-    /* Spacing */
     font-weight: bold;
-    /* Bold for emphasis */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Shadow for depth */
 }
 
-/* Card Paragraphs */
 .card p {
     font-size: 1rem;
-    /* Font size for info */
     color: rgba(255, 255, 255, 0.9);
-    /* Semi-transparent white */
     margin-bottom: 12px;
-    /* Spacing */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    /* Shadow */
 }
 
-/* Card Image Styles */
 .card-image {
     background: url('https://via.placeholder.com/150') no-repeat center center/cover;
-    /* Placeholder image */
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    /* Circular image */
     border: 4px solid rgba(255, 255, 255, 0.9);
-    /* Border color */
     margin: 0 auto 20px;
-    /* Center image */
     transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
 .card:hover .card-image {
     transform: scale(1.1);
-    /* Scale effect on hover */
     border-color: #ffeb3b;
-    /* Bright border on hover */
 }
 
-/* Card Before Effect */
 .card::before {
     content: '';
     position: absolute;
@@ -183,73 +139,44 @@ input[type="text"]:focus {
     height: 100%;
 }
 
-/* Error Messages */
 .error-message {
     background-color: #ffdddd;
-    /* Light red background */
     color: #d8000c;
-    /* Dark red text */
     border: 1px solid #d8000c;
-    /* Red border */
     padding: 12px;
-    /* Padding */
     margin: 10px 0;
-    /* Spacing */
     border-radius: 5px;
-    /* Rounded corners */
     font-weight: bold;
-    /* Bold text */
     display: flex;
-    /* Flex for icon alignment */
     align-items: center;
-    /* Center items vertically */
 }
 
 .error-icon {
     margin-right: 10px;
-    /* Spacing next to the icon */
 }
 
 /* Alert Messages */
 .alert-message {
     background-color: #f8d7da;
-    /* Light alert background */
     color: #721c24;
-    /* Dark alert text */
     border: 1px solid #f5c6cb;
-    /* Border for alert */
     padding: 15px;
-    /* Padding */
     margin: 10px 0;
-    /* Spacing */
     border-radius: 5px;
-    /* Rounded corners */
     position: relative;
-    /* Positioning */
     display: flex;
-    /* Flex for alignment */
 }
 
-/* Close Button */
 .close-button {
     background: transparent;
-    /* Transparent background */
     border: none;
-    /* No border */
     color: #721c24;
-    /* Dark color */
     font-weight: bold;
-    /* Bold */
     font-size: 16px;
-    /* Font size */
     position: absolute;
-    /* Absolute positioning */
     right: -5px;
-    /* Positioning */
     cursor: pointer;
-    /* Pointer cursor */
     margin-top: 10px;
-    /* Margin */
 }
 
 

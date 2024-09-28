@@ -2,7 +2,7 @@ const pokemonData = [];
 let timeoutID;
 
 async function getPokemon() {
-  const pokemonCount = 151; // Adjust this to get more Pokémon
+  const pokemonCount = 151; 
   const fetchPromises = Array.from({ length: pokemonCount }, (_, i) =>
     fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}`)
   );
@@ -13,7 +13,7 @@ async function getPokemon() {
       responses.map((response) => response.json())
     );
 
-    console.log("API Response:", results); // Log the entire response
+    console.log("API Response:", results); 
 
     if (results && Array.isArray(results)) {
       pokemonData.push(...results);
@@ -28,7 +28,7 @@ async function getPokemon() {
 
 function displayPokemons(pokemons) {
   const pokemonCardsContainer = document.getElementById("pokemon-cards");
-  pokemonCardsContainer.innerHTML = ""; // Clear the container
+  pokemonCardsContainer.innerHTML = ""; 
 
   if (pokemons.length === 0) {
     pokemonCardsContainer.innerHTML =
@@ -38,9 +38,8 @@ function displayPokemons(pokemons) {
       displayPokemons(pokemonData);
     }, 2000);
   } else {
-    // Display all Pokémon
     pokemons.forEach((pokemon) => {
-      const imageUrl = pokemon.sprites.front_default || "/images/default.png"; // Use the hero image from the API
+      const imageUrl = pokemon.sprites.front_default || "/images/default.png"; 
 
       const cardHTML = `
         <a href="/" class="card"> <!-- Wrap the card in an anchor tag -->
@@ -52,7 +51,7 @@ function displayPokemons(pokemons) {
           <p>Id: ${pokemon.id}</p>
         </a>
       `;
-      pokemonCardsContainer.innerHTML += cardHTML; // Add the card to the container
+      pokemonCardsContainer.innerHTML += cardHTML; 
     });
   }
 }
@@ -75,14 +74,14 @@ function filterPokemons() {
   }
 
   const filteredPokemons = pokemonData.filter((pokemon) => {
-    return pokemon.name.toLowerCase().includes(nameValue); // Only filter by name
+    return pokemon.name.toLowerCase().includes(nameValue); 
   });
 
   displayPokemons(filteredPokemons);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  getPokemon(); // Fetch Pokémon data on page load
+  getPokemon(); 
 
   const nameInput = document.getElementById("name-input");
   const filterButton = document.getElementById("filter-button");
